@@ -15,9 +15,7 @@ btn.addEventListener('click', async () => {
     const response = await fetch('https://api.openai.com/v1/responses', {
       method: 'POST',
       headers: {
-        'Content-Type': 'application/json',
-        'Authorization': 'Bearer 
-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'
+        'Content-Type': 'application/'
       },
       body: JSON.stringify({
         model: 'gpt-5-mini',
