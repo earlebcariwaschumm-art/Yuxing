@@ -1,0 +1,16 @@
+[
+  {
+    "en": {
+      "natural": "I just saw your message.",
+      "polite": "Sorry, I just saw your message.",
+      "casual": "I only just saw your message."
+    },
+    "jp": {
+      "natural": "さっきメッセージを見ました。",
+      "polite": "先ほどメッセージを確認しました。",
+      "casual": "今メッセージ見たよ。"
+    },
+    "scene": "回复消息",
+    "explain": "表示刚看到消息"
+  }
+]
