@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>语行</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="wrap">
+    <header class="hero">
+      <h1>语行</h1>
+      <p class="slogan">语言决定行动</p>
+      <p class="sub">把你想说的话，变成自然的英语和日语表达。</p>
+    </header>
+
+    <section class="card input-card">
+      <label for="inputText">输入一句中文</label>
+      <textarea id="inputText" placeholder="例如：我刚刚才看到你的消息"></textarea>
+      <div class="actions">
+        <button id="generateBtn">帮我表达</button>
+        <button id="sampleBtn" class="ghost">随机示例</button>
+      </div>
+      <p class="note">这是网页版原型，当前用内置表达库演示。</p>
+    </section>
+
+    <section id="resultSection" class="hidden">
+      <div class="card">
+        <h2>中文</h2>
+        <p id="cnText" class="main-text"></p>
+      </div>
+
+      <div class="card">
+        <h2>英文</h2>
+        <div class="line"><span>自然</span><span id="enNatural"></span><button class="copy-btn" data-target="enNatural">复制</button></div>
+        <div class="line"><span>更礼貌</span><span id="enPolite"></span><button class="copy-btn" data-target="enPolite">复制</button></div>
+        <div class="line"><span>更口语</span><span id="enCasual"></span><button class="copy-btn" data-target="enCasual">复制</button></div>
+      </div>
+
+      <div class="card">
+        <h2>日文</h2>
+        <div class="line"><span>自然</span><span id="jpNatural"></span><button class="copy-btn" data-target="jpNatural">复制</button></div>
+        <div class="line"><span>更礼貌</span><span id="jpPolite"></span><button class="copy-btn" data-target="jpPolite">复制</button></div>
+        <div class="line"><span>更口语</span><span id="jpCasual"></span><button class="copy-btn" data-target="jpCasual">复制</button></div>
+      </div>
+
+      <div class="card">
+        <h2>适合场景</h2>
+        <p id="sceneText"></p>
+        <h2>解释</h2>
+        <p id="explainText"></p>
+      </div>
+
+      <div class="card">
+        <button id="saveBtn" class="ghost full">收藏这句话</button>
+      </div>
+    </section>
+
+    <section class="card">
+      <h2>我的收藏</h2>
+      <div id="savedList" class="saved-list"></div>
+    </section>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>

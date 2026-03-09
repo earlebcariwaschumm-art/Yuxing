@@ -1,0 +1,140 @@
+:root{
+  --bg:#f5f5f7;
+  --card:#ffffff;
+  --text:#111111;
+  --muted:#6b7280;
+  --border:#e5e7eb;
+  --shadow:0 12px 30px rgba(0,0,0,.06);
+  --radius:20px;
+}
+*{box-sizing:border-box}
+body{
+  margin:0;
+  font-family:-apple-system,BlinkMacSystemFont,"SF Pro Text","PingFang SC","Helvetica Neue",sans-serif;
+  background:var(--bg);
+  color:var(--text);
+}
+.wrap{
+  max-width:840px;
+  margin:0 auto;
+  padding:32px 16px 60px;
+}
+.hero{
+  margin-bottom:24px;
+}
+.hero h1{
+  margin:0;
+  font-size:40px;
+  letter-spacing:.02em;
+}
+.slogan{
+  margin:8px 0 0;
+  color:var(--muted);
+  font-size:18px;
+}
+.sub{
+  margin:8px 0 0;
+  color:var(--muted);
+  font-size:15px;
+}
+.card{
+  background:var(--card);
+  border-radius:var(--radius);
+  box-shadow:var(--shadow);
+  padding:20px;
+  margin-bottom:16px;
+}
+label,h2{
+  margin:0 0 12px;
+  font-size:18px;
+}
+textarea{
+  width:100%;
+  min-height:120px;
+  resize:vertical;
+  border:none;
+  outline:none;
+  border-radius:16px;
+  background:#fafafa;
+  padding:14px 16px;
+  font-size:16px;
+  color:var(--text);
+}
+.actions{
+  display:flex;
+  gap:10px;
+  margin-top:14px;
+}
+button{
+  border:none;
+  background:#111111;
+  color:#fff;
+  border-radius:14px;
+  padding:14px 18px;
+  font-size:15px;
+  font-weight:700;
+  cursor:pointer;
+}
+button.ghost{
+  background:#fff;
+  color:#111111;
+  border:1px solid var(--border);
+}
+button.full{
+  width:100%;
+}
+.note{
+  margin:12px 0 0;
+  font-size:13px;
+  color:var(--muted);
+}
+.hidden{display:none}
+.main-text{
+  font-size:18px;
+  line-height:1.7;
+  margin:0;
+}
+.line{
+  display:grid;
+  grid-template-columns:72px 1fr auto;
+  gap:12px;
+  align-items:start;
+  padding:10px 0;
+  border-bottom:1px solid #f0f0f0;
+}
+.line:last-child{border-bottom:none}
+.line span:first-child{
+  font-weight:700;
+}
+.line button{
+  padding:8px 12px;
+  font-size:12px;
+  border-radius:10px;
+  background:#f3f4f6;
+  color:#111111;
+}
+.saved-list{
+  display:grid;
+  gap:10px;
+}
+.saved-item{
+  border:1px solid var(--border);
+  border-radius:14px;
+  padding:14px;
+  background:#fafafa;
+}
+.saved-cn{
+  font-weight:700;
+  margin-bottom:6px;
+}
+.saved-en{
+  color:var(--muted);
+  font-size:14px;
+}
+@media (max-width: 600px){
+  .wrap{padding-top:24px}
+  .hero h1{font-size:34px}
+  .actions{flex-direction:column}
+  .line{grid-template-columns:1fr; gap:6px}
+  .line button{justify-self:start}
+}
