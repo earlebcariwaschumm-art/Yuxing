@@ -15,7 +15,7 @@ function pickCard(input) {
   if (!cards.length) return null;
   const sample = cards[hashInput(input) % cards.length];
   return {
-    cn: input,
+    cn: input || "",
     en: sample.en,
     jp: sample.jp,
     scene: sample.scene,
