@@ -3,7 +3,7 @@ let cards = [];
 let currentCard = null;
 
 async function loadCards() {
-  const res = await fetch('./assets/cards.json');
+  const res = await fetch('assets/cards.json');
   cards = await res.json();
 }
 
