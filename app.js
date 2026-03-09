@@ -3,7 +3,34 @@ let cards = [];
 let currentCard = null;
 
 async function loadCards() {
-  const res = await fetch('assets/cards.json');
+  const btn = document.getElementById("generateBtn");
+
+btn.addEventListener("click", async () => {
+  const input = document.getElementById("inputText").value;
+
+  if (!input) {
+    alert("请输入一句中文");
+    return;
+  }
+
+  const response = await fetch("https://api.openai.com/v1/responses", {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+      "Authorization": "Bearer 
+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"
+    },
+    body: JSON.stringify({
+      model: "gpt-5-mini",
+      input: `把这句话变成自然的英文和日文表达：${input}`
+    })
+  });
+
+  const data = await response.json();
+
+  document.getElementById("cnText").textContent = input;
+  document.getElementById("enNatural").textContent = data.output[0].content[0].text;
+});
   cards = await res.json();
 }
 
